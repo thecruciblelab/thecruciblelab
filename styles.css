@@ -1,39 +1,49 @@
 :root {
-  --bg: #fff;
-  --text: #111;
-  --accent: #222;
-}
-[data-theme="dark"] {
-  --bg: #18191a;
-  --text: #e4e6eb;
-  --accent: #fff;
+  --background: #181a1b;
+  --text: #fff;
+  --accent: #228B22; /* Updated to requested forest green */
 }
 html, body {
+  background: var(--background);
+  color: var(--text);
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, sans-serif;
-  transition: background 0.2s, color 0.2s;
+  font-family: 'Segoe UI', 'Fira Sans', Arial, sans-serif;
   min-height: 100vh;
 }
-header, footer {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   text-align: center;
-  padding: 1rem;
 }
-button#theme-toggle {
-  background: none;
-  color: var(--text);
-  border: 1px solid var(--accent);
-  border-radius: 2em;
-  padding: 0.25em 0.75em;
-  font-size: 1em;
-  cursor: pointer;
-  float: right;
-  margin-top: -2.3em;
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  margin-top: 0;
+  letter-spacing: 0.03em;
 }
-main {
-  padding: 2rem 1rem;
-  max-width: 600px;
-  margin: 2em auto 3em auto;
+.accent {
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #eee;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #90bca7;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: center;
 }
